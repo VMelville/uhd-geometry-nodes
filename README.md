@@ -2,27 +2,26 @@
 
 Blenderの Geometry Nodes を使用した物体検出モデルの実装です。
 
-## 概要
+PINTO氏による軽量な物体検出モデル **UHD** が実装されています。
 
-このプロジェクトは、PINTO氏による軽量な物体検出モデル **UHD** を Blender Geometry Nodes に統合したものです。
+<img width="2560" height="1604" alt="image" src="https://github.com/user-attachments/assets/f8d7f6b5-e176-425e-ad53-0f04b94c8855" />
 
-## 利用技術
+## 利用モデルについて
 
 - **UHD（物体検出モデル）**: [PINTO0309/UHD](https://github.com/PINTO0309/UHD)（MIT License）
-- **モデルバリアント**: `ultratinyod_res_anc8_w16_64x64_opencv_inter_nearest_static.onnx`
-- **テクスチャ**: ONNX から抽出した重みを TIFF テクスチャ化したもの
+- 利用したバリアントは `ultratinyod_res_anc8_w16_64x64_opencv_inter_nearest_static.onnx`
+- ONNX から抽出した重みを TIFF テクスチャ化し、texturesフォルダ以下に格納しています。
 
-## 使用方法
-
-### 動作確認
+## 実行方法
 
 Blender 5.0 以降でプロジェクトファイル（`.blend`）を開くことで動作を確認できます。
 
-## データ出典
+## サンプル画像について
 
-- **サンプル画像**: [Tokyo Railway Station](https://commons.wikimedia.org/wiki/File:Tokyo_Railway_Station._(44436526580).jpg)（パブリックドメイン）
-  - `image/` ディレクトリ以下に配置されているサンプル画像は、上記のパブリックドメイン画像を正方形にトリミング・リサイズしたものです。
+[Tokyo Railway Station](https://commons.wikimedia.org/wiki/File:Tokyo_Railway_Station._(44436526580).jpg)（パブリックドメイン）
+
+`image/` ディレクトリ以下に配置されているサンプル画像は、上記の画像を 2048 × 2048 px にトリミング・リサイズしたものです。
 
 ## ライセンス
 
-本プロジェクトで使用している UHD は MIT License の下で提供されています。
+MIT License
